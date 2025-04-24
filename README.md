@@ -72,7 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### 选择一种提交规范适配器（如 Angular 规范）
 
-commitizen init cz-conventional-changelog --save --save-exact
+npx commitizen init cz-conventional-changelog --save --save-exact
 
 
 ### 添加CHANGELOG.md日志客户端
@@ -106,3 +106,39 @@ scripts: {
 npm run release -- --release-as major  # 强制升级主版本
 npm run release -- --release-as minor  # 强制升级次版本 
 npm run release -- --release-as 2.1.0 # 指定具体版本 
+npm run release -- --skip.bump --skip.tag # 跳过版本更新和创建标签
+
+### 添加prettierc 美化代码
+
+npm i -D prettier@2
+
+
+### commitlint 强制校验提交信息
+
+npm i -D @commitlint/cli@15 @commitlint/config-conventional@15
+
+### husky
+
+```
+npx husky@8 install
+npx husky@8 add .husky/commit-msg npx commitlint --edit $1
+
+// commitlint.config.js
+module.exports  = {
+  extends: ['@commitlint/config-conventional']
+}
+```
+
+### 提交前校验代码风格
+
+```
+npm i -D lint-staged@13.0.0
+npx husky@8 add .husky/pre-commit npx lint-staged
+
+"lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix"
+    ],
+    "!src/{a,b}/**": []
+},
+```
