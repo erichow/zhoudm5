@@ -95,3 +95,14 @@ npx conventional-changelog -p angular -i CHANGELOG.md  -s
 -r：1  
 
 -r 表示生成 changelog 所需要使用的 release 版本数量，默认为1，全部则是0。
+
+
+### 手动指定版本类型
+// package.json
+scripts: { 
+	"release": "standard-version"
+}
+
+npm run release -- --release-as major  # 强制升级主版本
+npm run release -- --release-as minor  # 强制升级次版本 
+npm run release -- --release-as 2.1.0 # 指定具体版本 
