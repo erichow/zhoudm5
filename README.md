@@ -73,3 +73,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### 选择一种提交规范适配器（如 Angular 规范）
 
 commitizen init cz-conventional-changelog --save --save-exact
+
+
+### 添加CHANGELOG.md日志客户端
+
+npm i -D conventional-changelog-cli@3
+
+### 生成变更日志 
+
+根据最近的 Git 提交记录生成日志（仅包含自上次 tag 后的变更）
+
+npx conventional-changelog -p angular -i CHANGELOG.md  -s
+
+-p angular：指定使用 Angular 提交规范5
+-i CHANGELOG.md ：指定输出文件
+-s：覆盖原文件而非追加
+
+-p angular：指定使用 Angular 提交规范5
+-i CHANGELOG.md ：指定输出文件
+-s：覆盖原文件而非追加
+-r：1  
+
+-r 表示生成 changelog 所需要使用的 release 版本数量，默认为1，全部则是0。
