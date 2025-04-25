@@ -83,6 +83,7 @@ npm i -D conventional-changelog-cli@3
 
 根据最近的 Git 提交记录生成日志（仅包含自上次 tag 后的变更）
 
+```
 npx conventional-changelog -p angular -i CHANGELOG.md  -s
 
 -p angular：指定使用 Angular 提交规范5
@@ -96,8 +97,11 @@ npx conventional-changelog -p angular -i CHANGELOG.md  -s
 
 -r 表示生成 changelog 所需要使用的 release 版本数量，默认为1，全部则是0。
 
+```
 
 ### 手动指定版本类型
+
+```
 // package.json
 scripts: { 
 	"release": "standard-version"
@@ -107,15 +111,16 @@ npm run release -- --release-as major  # 强制升级主版本
 npm run release -- --release-as minor  # 强制升级次版本 
 npm run release -- --release-as 2.1.0 # 指定具体版本 
 npm run release -- --skip.bump --skip.tag # 跳过版本更新和创建标签
+```
 
 ### 添加prettierc 美化代码
 
-npm i -D prettier@2
+`npm i -D prettier@2`
 
 
 ### commitlint 强制校验提交信息
 
-npm i -D @commitlint/cli@15 @commitlint/config-conventional@15
+`npm i -D @commitlint/cli@15 @commitlint/config-conventional@15`
 
 ### husky
 
