@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/erichow/zhoudm5/compare/v0.1.1...v0.1.2) (2025-04-25)
+
+
+### Bug Fixes
+
+* **readme:** 更新第三方插件和nodejs版本的关联关系 ([760e80d](https://github.com/erichow/zhoudm5/commit/760e80d83f02d1b374a9feca1ba6e43aaa03502f)), closes [#1](https://github.com/erichow/zhoudm5/issues/1)
+
 ### 0.1.1 (2025-04-25)
 
 
