@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/erichow/zhoudm5/compare/v0.1.2...v0.1.3) (2025-04-25)
+
+
+### Bug Fixes
+
+* changelog日志重复 ([8e1e28c](https://github.com/erichow/zhoudm5/commit/8e1e28ca20200ee369a767f4a1b01bb36656c9be)), closes [#2](https://github.com/erichow/zhoudm5/issues/2)
+
 ### [0.1.2](https://github.com/erichow/zhoudm5/compare/v0.1.1...v0.1.2) (2025-04-25)
 
 
